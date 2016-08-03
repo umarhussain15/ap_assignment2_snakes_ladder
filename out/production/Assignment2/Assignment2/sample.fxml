@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="mainpane" dividerPositions="0.3927855711422846" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assignment2.GameController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="rolldice" layoutX="217.0" layoutY="47.0" mnemonicParsing="false" onAction="#DoTurn" prefHeight="25.0" prefWidth="137.0" text="Roll Dice" />
+            <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="11.0" layoutY="263.0" prefHeight="327.0" prefWidth="370.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="77.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="55.0" minHeight="2.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="player1" alignment="CENTER" prefHeight="85.0" prefWidth="189.0" text="Player 1" textFill="#0010ff" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player2" alignment="CENTER" prefHeight="85.0" prefWidth="189.0" text="Player 2" textFill="#0010ff" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player3" alignment="CENTER" prefHeight="85.0" prefWidth="189.0" text="Player 3" textFill="#0010ff" visible="false" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player4" alignment="CENTER" prefHeight="85.0" prefWidth="189.0" text="Player 4" textFill="#0010ff" visible="false" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="189.0" text="Player Name" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="97.0" text="Current Position" GridPane.columnIndex="1" />
+                  <Label fx:id="curpos1" alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="106.0" text="0" textFill="#0010ff" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="curpos2" alignment="CENTER" prefHeight="77.0" prefWidth="106.0" text="0" textFill="#0010ff" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="curpos3" alignment="CENTER" prefHeight="77.0" prefWidth="106.0" text="0" textFill="#0010ff" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="curpos4" alignment="CENTER" prefHeight="77.0" prefWidth="106.0" text="0" textFill="#0010ff" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="110.0" text="Last Roll" GridPane.columnIndex="2" />
+                  <Label fx:id="lastroll1" alignment="CENTER" prefHeight="86.0" prefWidth="99.0" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastroll2" alignment="CENTER" prefHeight="86.0" prefWidth="99.0" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastroll3" alignment="CENTER" prefHeight="86.0" prefWidth="99.0" text="-" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastroll4" alignment="CENTER" prefHeight="86.0" prefWidth="99.0" text="-" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="    Turns" GridPane.columnIndex="3" />
+                  <Label fx:id="turn1" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="99.0" text="0" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="turn2" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="99.0" text="0" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="turn3" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="99.0" text="0" textFill="RED" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="turn4" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="99.0" text="0" textFill="RED" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label fx:id="CurTurn" layoutX="14.0" layoutY="25.0" prefHeight="72.0" prefWidth="189.0" text="Label" textFill="#27d300">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="216.0" prefHeight="47.0" prefWidth="111.0" text="Score Card" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Line endX="275.0" layoutX="105.0" layoutY="216.0" startX="-100.0" />
+            <Label layoutX="204.0" layoutY="97.0" text="Last Dice Roll Val was:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="CurDice" layoutX="260.0" layoutY="131.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="102.0" prefHeight="17.0" prefWidth="168.0" text="Message" />
+            <Line endY="216.0" layoutX="200.0" />
+            <Button fx:id="NextPlayer" disable="true" layoutX="40.0" layoutY="184.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Next Player" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="598.0" fitWidth="609.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@map.gif" />
+               </image></ImageView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
